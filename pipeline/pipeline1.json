@@ -1,0 +1,56 @@
+{
+	"name": "pipeline1",
+	"properties": {
+		"activities": [
+			{
+				"name": "ProcessBlobToDB",
+				"description": "ProcessBlobToDB",
+				"type": "Copy",
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"typeProperties": {
+					"source": {
+						"type": "BlobSource",
+						"recursive": true,
+						"maxConcurrentConnections": 1
+					},
+					"sink": {
+						"type": "SqlSink",
+						"writeBatchSize": 10000
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"columnMappings": {
+							"orderId": "orderId",
+							"orderDate": "orderDate",
+							"customer": "customer",
+							"billingAddress": "billingAddress",
+							"shippingAddress": "shippingAddress",
+							"units": "units",
+							"amount": "amount",
+							"remarks": "remarks"
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "OrderBlobDataset",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		]
+	}
+}

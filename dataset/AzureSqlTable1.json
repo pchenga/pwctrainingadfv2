@@ -1,0 +1,47 @@
+{
+	"name": "AzureSqlTable1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"type": "AzureSqlTable",
+		"structure": [
+			{
+				"name": "orderId",
+				"type": "Int32"
+			},
+			{
+				"name": "orderDate",
+				"type": "Date"
+			},
+			{
+				"name": "customer",
+				"type": "String"
+			},
+			{
+				"name": "billingAddress",
+				"type": "String"
+			},
+			{
+				"name": "shippingAddress",
+				"type": "String"
+			},
+			{
+				"name": "units",
+				"type": "Int32"
+			},
+			{
+				"name": "amount",
+				"type": "Int32"
+			},
+			{
+				"name": "remarks",
+				"type": "String"
+			}
+		],
+		"typeProperties": {
+			"tableName": "[dbo].[ProcessedOrders]"
+		}
+	}
+}
