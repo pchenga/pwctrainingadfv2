@@ -7,15 +7,51 @@
 			"type": "LinkedServiceReference"
 		},
 		"type": "AzureBlob",
+		"structure": [
+			{
+				"name": "orderId",
+				"type": "String"
+			},
+			{
+				"name": "orderDate",
+				"type": "DateTime"
+			},
+			{
+				"name": "customer",
+				"type": "String"
+			},
+			{
+				"name": "billingAddress",
+				"type": "String"
+			},
+			{
+				"name": "shippingAddress",
+				"type": "String"
+			},
+			{
+				"name": "units",
+				"type": "Int32"
+			},
+			{
+				"name": "amount",
+				"type": "Int32"
+			},
+			{
+				"name": "remarks",
+				"type": "String"
+			}
+		],
 		"typeProperties": {
 			"format": {
 				"type": "TextFormat",
 				"columnDelimiter": ",",
 				"rowDelimiter": "",
+				"quoteChar": "\"",
 				"nullValue": "\\N",
+				"encodingName": null,
 				"treatEmptyAsNull": true,
 				"skipLineCount": 0,
-				"firstRowAsHeader": false
+				"firstRowAsHeader": true
 			},
 			"fileName": "internet-orders.csv",
 			"folderPath": "data-files"
