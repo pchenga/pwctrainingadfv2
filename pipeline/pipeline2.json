@@ -11,6 +11,13 @@
 					"retryIntervalInSeconds": 30,
 					"secureOutput": false,
 					"secureInput": false
+				},
+				"typeProperties": {
+					"notebookPath": "/Shared/Test"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
 				}
 			}
 		]
