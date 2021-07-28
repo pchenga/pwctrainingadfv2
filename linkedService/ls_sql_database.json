@@ -1,0 +1,12 @@
+{
+	"name": "ls_sql_database",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": "integrated security=False;encrypt=True;connection timeout=30;data source=pctest729dbserver.database.windows.net;initial catalog=pctest729db;user id=pcadmin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIlBDVEVTVDcyOUFERl9hNzE2MTE3Yi1iY2M4LTRjMTYtYmE4My00YjIxOGE4YWM0ZmEiDQp9"
+		}
+	}
+}
