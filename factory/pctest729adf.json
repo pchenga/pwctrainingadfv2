@@ -1,0 +1,9 @@
+{
+	"name": "pctest729adf",
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1823dc15-2990-4121-b4b2-329706e5e05b",
+		"tenantId": "1011d28c-34b1-4067-a8c8-6d343be90e5c"
+	}
+}
