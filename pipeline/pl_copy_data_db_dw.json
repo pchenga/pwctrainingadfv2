@@ -33,10 +33,22 @@
 								},
 								"sink": {
 									"type": "SqlDWSink",
+									"allowPolyBase": true,
+									"polyBaseSettings": {
+										"rejectValue": 0,
+										"rejectType": "value",
+										"useTypeDefault": true
+									},
 									"tableOption": "autoCreate",
 									"disableMetricsCollection": false
 								},
-								"enableStaging": false
+								"enableStaging": true,
+								"stagingSettings": {
+									"linkedServiceName": {
+										"referenceName": "ls_pctest729blob",
+										"type": "LinkedServiceReference"
+									}
+								}
 							},
 							"inputs": [
 								{
